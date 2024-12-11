@@ -1,6 +1,6 @@
 import Hero from './components/Hero.jsx'
 import Navigation from './components/Navigation.jsx'
-import About from './components/About.jsx'
+import ToggleComponent from './components/ToggleComponent.jsx'
 function App() {
 
 
@@ -8,8 +8,8 @@ function App() {
     <>
   <Navigation />
   <Hero />
-  <About />
-    </>
+  <ToggleComponent />
+  </>
   )
 }
 
