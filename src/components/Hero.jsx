@@ -14,7 +14,7 @@ const Hero = () => {
 
   return (
     <>
-      <div className="md:h-72 border-white bg-slate-950">
+      <div className="bg-slate-950">
         <div className="flex flex-col md:flex-row md:justify-center md:gap-20 items-center">
           <div className="flex flex-col items-center md:items-center">
             <div className="card">
