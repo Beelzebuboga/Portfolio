@@ -14,9 +14,7 @@ import capcutImage from '../assets/Photos/capcut.png';
 import premiereImage from '../assets/Photos/premiere pro.png';
 import illusImage from '../assets/Photos/illustrator.png';
 import photoshopImage from '../assets/Photos/photoshop.png'
-
-
-
+import BasicTimeline from './Timeline';
 
 const Experience = () => {
     const progLanguage = [
@@ -43,42 +41,47 @@ const Experience = () => {
     ]
 
     return (
-        <div className='bg-slate-950 text-white py-8 mx-auto'>
-            <div className='flex md:flex-row flex-col md:justify-evenly'>
-             <div className="flex justify-center">
-            <hr className="border-t border-gray-300 w-5/6 md:w-9/12 lg:w-5/12" />
-            </div>
-
-            <div className='flex flex-col md:w-1/ md:max-w-96'>
-            <h1 className='font-bold text-center mt-8 mb-2'>Programming Languages</h1>
-            <div className="flex flex-wrap space-x-1 md:space-x-4 justify-center md:justify-center md:ml-18">
-                {progLanguage.map((progLanguages, index) => (
-                    <div key={index}>
-                        <img className="w-14 h-14 mt-2" src={progLanguages.image} alt={progLanguages.alt} />
+        <div className='bg-slate-950 text-white py-8'>
+            <div className='flex md:flex-row justify-center flex-col'>
+                <div className='flex flex-col items-center justify-center w-full md:w-1/2 xl:w-1/3'>
+                    <h1 className='font-bold text-center mt-8 mb-2'>Technical Skills</h1>
+                    <div className="flex flex-col items-center justify-center">
+                        <div className="mb-10">
+                            <h2 className='text-center mb-4'>Programming Languages</h2>
+                            <div className="flex flex-wrap space-x-4 justify-center">
+                                {progLanguage.map((progLanguages, index) => (   
+                                    <div key={index}>
+                                        <img className="size-10 mt-2" src={progLanguages.image} alt={progLanguages.alt} />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="mb-10">
+                            <h2 className='text-center mb-4'>Frameworks / Libraries / Databases</h2>
+                            <div className="flex flex-wrap space-x-4 justify-center">
+                                {frameworks.map((framework, index) => (
+                                    <div key={index}>
+                                        <img className="size-10 mt-2" src={framework.image} alt={framework.alt} />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div>
+                            <h2 className='text-center mb-4'>Multimedia Software</h2>
+                            <div className="flex flex-wrap space-x-4 justify-center">
+                                {graphics.map((graphic, index) => (
+                                    <div key={index}>
+                                        <img className="size-10 mt-2" src={graphic.image} alt={graphic.alt} />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
-                ))}
-            </div>
-            <h1 className='font-bold text-center md:justify-center mb-2 mt-10'>Frameworks / Libraries / Databases</h1>
-            <div className="flex space-x-4 flex-wrap justify-center md:justify-center md:ml-18">
-                {frameworks.map((framework, index) => (
-                    <div key={index}>
-                        <img className="w-14 h-14 mt-2" src={framework.image} alt={framework.alt} />
-                    </div>
-                ))}
-            </div>
-            <h1 className='font-bold text-center md:justify-center  mb-2 mt-10'>Multimedia Software</h1>
-            <div className="flex flex-wrap space-x-4 justify-center md:justify-center md:ml-18 ">
-                {graphics.map((graphic, index) => (
-                    <div key={index}>
-                        <img className="w-14 h-14 mt-2" src={graphic.image} alt={graphic.alt} />
-                    </div>
-                ))}
-            </div>
-            </div>
-
-            <div className='w-1/2'>
-                <h1>adafasfda</h1>
-            </div>
+                </div>
+                <div className='flex flex-col items-center justify-center w-full md:w-1/2 xl:w-1/3 mt-10'>
+                    <h1 className='font-bold text-center mt-6 md:mt-0 mb-2'>Work/Intern Experience</h1>
+                    <BasicTimeline />
+                </div>
             </div>
         </div>
     );

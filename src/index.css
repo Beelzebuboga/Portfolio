@@ -5,11 +5,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import 'flowbite';
 
 
 .card img{
    height: 150px;
     border-radius: 50%;
 }
+
 
 

@@ -5,6 +5,7 @@ const About = () => {
           <hr className="border-t border-gray-300 w-5/6 md:w-9/12 lg:w-5/12" />
         </div>
         <br />
+         {/*About me*/}
         <p className="text-base md:text-md lg:text-md px-8 md:px-24 max-w-5xl mx-auto">
           Hi, I am Abdul-khaliq Ranao Solaiman. I am a passionate Web Developer, Graphic Designer, and Video Editor and have been working for over two years to create meaningful digital and visual content. I started it out of curiosity, but this has turned into a proper stream wherein I am constantly looking for creative and technical solutions for every challenge I’m faced with. 
           <br /><br />

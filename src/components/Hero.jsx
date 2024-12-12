@@ -4,18 +4,21 @@ import Web from "../assets/Photos/i-code.png";
 import Video from "../assets/Photos/i-video.png";
 import Graphic from "../assets/Photos/i-graphic.png";
 import Resume from "../assets/Files/Resume.pdf";
+import ToggleComponent from "./ToggleComponent";
 
 const Hero = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
-  };
+};
 
   return (
     <>
-      <div className="bg-slate-950">
+      <div className="bg-slate-950 h-screen pt-20">
         <div className="flex flex-col md:flex-row md:justify-center md:gap-20 items-center">
+
+           {/*Profile Picture*/}
           <div className="flex flex-col items-center md:items-center">
             <div className="card">
               <img src={Photo} alt="my Profile" />
@@ -24,6 +27,7 @@ const Hero = () => {
             <p className="text-white italic">Design. Edit. Code.</p>
           </div>
 
+           {/*Major Skills*/}
           <div className="flex flex-col">
             <div className="flex flex-row justify-center space-x-16 md:space-x-20 mt-10">
               <div>
@@ -42,6 +46,8 @@ const Hero = () => {
               </div>
             </div>
 
+
+             {/*Resume and Contacts*/}
             <div className="flex flex-row md:space-x-8 md:mt-12 gap-4 md:gap-0 mt-8">
               <a href={Resume} download>
                 <button className="text-white text-sm ring-2 ring-gray-800 bg-gray-800 rounded-md px-8 md:px-10 lg:px-10 hover:ring-gray-50 h-8">
@@ -67,6 +73,7 @@ const Hero = () => {
                   Contact me
                 </button>
     
+               {/*Contact Dropdown*/}
               {isDropdownOpen && (
                   <div className="absolute right-0 mt-2 bg-white shadow-lg w-32 hover:border-2">
                     <a
@@ -105,7 +112,9 @@ const Hero = () => {
             </div>
           </div>
         </div>
+        <ToggleComponent />
       </div>
+     
     </>
   );
 };
